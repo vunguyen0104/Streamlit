@@ -219,4 +219,22 @@ dataFrameSerialization = "legacy"
 4. Run "$streramlit show config" again to make sure the syntax is correct
 
 
+Backup config.toml
+[global]
+dataFrameSerialization = "legacy"
+
+[theme]
+primaryColor="#e694ff"
+backgroundColor="#00172b"
+secondaryBackgroundColor="#0083b8"
+textColor="#ffffff"
+
+Another color theme
+[theme]
+primaryColor="#222831"
+backgroundColor="#393E46"
+secondaryBackgroundColor="#00ADB5"
+textColor="#ffffff"
+
+
 

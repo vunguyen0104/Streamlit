@@ -1,6 +1,8 @@
+from numpy import isnan
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+import numpy as np
 
 # Emojis: https://www.webfx.com/tools/emoji-cheat-sheet/
 # This must be the first Streamlit command used in your app, and must only be set once. 
@@ -59,9 +61,9 @@ st.markdown("##")
 
 # TOP KPI's
 total_sales = int(df_selection["Total"].sum())
-average_rating = round(df_selection["Rating"].mean(), 1)
-star_rating = ":star:" * int(round(average_rating, 0))
-average_sale_by_transaction = round(df_selection["Total"].mean(), 2)
+average_rating = 0 if np.isnan(df_selection["Rating"].mean()) else round(df_selection["Rating"].mean(), 1) # Handle when user clears all the filters
+star_rating =  ":star:" * int(round(average_rating, 0))
+average_sale_by_transaction = 0 if np.isnan(df_selection["Total"].mean()) else round(df_selection["Total"].mean(), 2) # Handle when user clears all the filters
 
 left_column, middle_column, right_column = st.columns(3)
 with left_column:

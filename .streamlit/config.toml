@@ -2,7 +2,7 @@
 dataFrameSerialization = "legacy"
 
 [theme]
-primaryColor="#e694ff"
-backgroundColor="#00172b"
-secondaryBackgroundColor="#0083b8"
+primaryColor="#222831"
+backgroundColor="#393E46"
+secondaryBackgroundColor="#00ADB5"
 textColor="#ffffff"
